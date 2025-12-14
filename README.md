@@ -2,10 +2,12 @@ openapi: 3.1.0
 info:
   title: Notion Write API
   version: 1.2.0
+
 servers:
-  - url: -------------변경----------------------
+  - url: -------변경--------
 
 components:
+  schemas: {}   
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
@@ -58,7 +60,6 @@ paths:
           application/json:
             schema:
               type: object
-              additionalProperties: false
               required: [page_id, content]
               properties:
                 page_id:
@@ -78,7 +79,6 @@ paths:
           application/json:
             schema:
               type: object
-              additionalProperties: false
               required: [parent_page_id, title, content]
               properties:
                 parent_page_id:
@@ -100,7 +100,6 @@ paths:
           application/json:
             schema:
               type: object
-              additionalProperties: false
               required: [title, content]
               properties:
                 title:
@@ -120,7 +119,6 @@ paths:
           application/json:
             schema:
               type: object
-              additionalProperties: false
               required: [title, content, confirm]
               properties:
                 title:
